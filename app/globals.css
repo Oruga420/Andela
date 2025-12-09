@@ -1,0 +1,264 @@
+:root {
+  --blue-100: #e9f4ff;
+  --blue-200: #d4e8ff;
+  --blue-400: #5ba8f7;
+  --blue-600: #1f6fbc;
+  --blue-800: #114372;
+  --ink: #0d1b2a;
+  --muted: #4b647a;
+  --card: #ffffff;
+  --shadow: 0 12px 35px rgba(17, 67, 114, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Baloo 2", "Trebuchet MS", Arial, sans-serif;
+  background: radial-gradient(circle at 10% 20%, var(--blue-100), #fff 25%),
+    radial-gradient(circle at 90% 10%, var(--blue-200), #fff 30%),
+    #ffffff;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.name-block {
+  background: var(--card);
+  border: 2px solid var(--blue-400);
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  padding: 18px 20px;
+  position: relative;
+}
+
+.name {
+  font-size: 28px;
+  margin: 0 0 4px;
+  letter-spacing: 0.4px;
+}
+
+.role {
+  margin: 0;
+  color: var(--blue-800);
+  font-weight: 600;
+}
+
+.summary {
+  margin: 14px 0 0;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.contact-card {
+  background: linear-gradient(150deg, var(--blue-600), var(--blue-400));
+  color: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.contact-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.contact-list {
+  display: grid;
+  gap: 8px;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 0;
+}
+
+.chip {
+  background: var(--blue-100);
+  border: 1px solid var(--blue-400);
+  color: var(--blue-800);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(31, 111, 188, 0.15);
+}
+
+.section {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--blue-200);
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.section-title {
+  margin: 0 0 8px;
+  color: var(--blue-800);
+  letter-spacing: 0.3px;
+}
+
+.experience {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.experience-item {
+  background: var(--blue-100);
+  border: 1px solid var(--blue-400);
+  border-radius: 14px;
+  padding: 12px 12px 12px 14px;
+  box-shadow: 0 6px 16px rgba(17, 67, 114, 0.12);
+}
+
+.experience-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.experience-role {
+  margin: 0;
+  font-weight: 700;
+}
+
+.experience-meta {
+  margin: 2px 0 6px;
+  color: var(--blue-800);
+  font-weight: 600;
+}
+
+.experience-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.education {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.edu-item {
+  border: 1px solid var(--blue-400);
+  background: var(--blue-100);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.edu-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.edu-meta {
+  margin: 2px 0 4px;
+  color: var(--blue-800);
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 0 6px;
+  z-index: 10;
+}
+
+.button {
+  background: var(--blue-600);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(17, 67, 114, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(17, 67, 114, 0.3);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 840px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  .toolbar {
+    display: none;
+  }
+  .section,
+  .name-block,
+  .contact-card,
+  .experience-item,
+  .edu-item {
+    box-shadow: none;
+  }
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/baloo2/v20/wXKvE3kTposypRydz1QH6sd4VQ.woff2")
+      format("woff2");
+}
